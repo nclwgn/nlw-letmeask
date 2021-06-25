@@ -1,13 +1,14 @@
-import logoImg from "../assets/images/logo.svg";
-import { Button } from "./Button";
+import logoImg from "../../assets/images/logo.svg";
 
-import "../styles/room.scss";
-import { RoomCode } from "./RoomCode";
+import { Button } from "../Button";
+import { RoomCode } from "../RoomCode";
 import { useParams } from "react-router-dom";
 import { FormEvent, useState } from "react";
-import { useAuth } from "../hooks/useAuth";
-import { database } from "../services/firebase";
+import { useAuth } from "../../hooks/useAuth";
+import { database } from "../../services/firebase";
 import { useEffect } from "react";
+
+import "./styles.scss";
 
 type FirebaseQuestions = Record<string, {
     author: {

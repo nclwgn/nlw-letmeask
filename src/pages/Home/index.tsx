@@ -1,16 +1,17 @@
 import { useHistory } from 'react-router-dom';
 
-import { database } from '../services/firebase';
+import illustrationImg from '../../assets/images/illustration.svg';
+import logoImg from '../../assets/images/logo.svg';
+import googleIconImg from '../../assets/images/google-icon.svg';
 
-import illustrationImg from '../assets/images/illustration.svg';
-import logoImg from '../assets/images/logo.svg';
-import googleIconImg from '../assets/images/google-icon.svg';
-
-import '../styles/auth.scss';
-import { Button } from '../components/Button';
-import { useAuth } from '../hooks/useAuth';
+import { Button } from '../../components/Button';
+import { useAuth } from '../../hooks/useAuth';
 import { FormEvent } from 'react';
 import { useState } from 'react';
+
+import '../../styles/auth.scss';
+
+import { database } from '../../services/firebase';
 
 export function Home() {
     const { user, signInWithGoogle } = useAuth();
